@@ -4,15 +4,21 @@ const rutinasFamosos = [
     id: 'cr7',
     dificultad: 'extrema',
     nombre: 'Cristiano Ronaldo',
-    descripcion: 'Entrenamiento de élite enfocado en potencia de piernas, agilidad y core explosivo.',
+    descripcion: 'Fuerza explosiva, agilidad, resistencia cardiovascular, core de acero y definición muscular sin perder rendimiento',
     dias: [
       {
         dia: 'Lunes - Potencia de piernas',
-        extras: ['Drills con conos (agilidad)', 'Estiramiento de cadera y glúteos'],
+        extras: ['Calentamiento Jumping jacks 2 min, sentadillas con peso corporal x 20 y skiping alto x 30 seg', 'Sprint:10 x 40 metros (descanso 30–45 seg)'],
         ejercicios: [
-          { nombre: 'Sentadillas con salto', repeticiones: '5 x 15' },
-          { nombre: 'Sprint cortos en el lugar', repeticiones: '5 x 20s' },
-          { nombre: 'Zancadas explosivas', repeticiones: '4 x 12 por pierna' }
+          { nombre: 'Sentadillas con barra', repeticiones: '4 x 8' },
+          { nombre: 'Peso muerto rumano', repeticiones: '4 x 10' },
+          { nombre: 'Prensa 45', repeticiones: '4 x 12' },
+          { nombre: 'Zancadas caminando con mancuernas', repeticiones: '3 x 15 c/pierna' },
+          { nombre: 'Elevación de talones', repeticiones: '4 x 20' },
+          { nombre: 'Plancha frontal', repeticiones: '3 x 1 min' },
+          { nombre: 'Ab wheel', repeticiones: '3 x 10' },
+          { nombre: 'Elevación de piernas colgado', repeticiones: '3 x 15' },
+          { nombre: 'Crunch bicicleta', repeticiones: '3 x 30' }
         ]
       },
       {
