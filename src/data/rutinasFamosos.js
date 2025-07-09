@@ -7,8 +7,8 @@ const rutinasFamosos = [
     descripcion: 'Fuerza explosiva, agilidad, resistencia cardiovascular, core de acero y definición muscular sin perder rendimiento',
     dias: [
       {
-        dia: 'Lunes - Potencia de piernas',
-        extras: ['Calentamiento Jumping jacks 2 min, sentadillas con peso corporal x 20 y skiping alto x 30 seg', 'Sprint:10 x 40 metros (descanso 30–45 seg)'],
+        dia: 'Lunes - Tren inferior + Sprint + Core',
+        extras: ['Calentamiento Jumping jacks 2 min, sentadillas con peso corporal x 20 y skiping alto x 30 seg', 'Sprint:10 x 40 metros (descanso 30 seg)'],
         ejercicios: [
           { nombre: 'Sentadillas con barra', repeticiones: '4 x 8' },
           { nombre: 'Peso muerto rumano', repeticiones: '4 x 10' },
@@ -22,12 +22,26 @@ const rutinasFamosos = [
         ]
       },
       {
-        dia: 'Martes - Core funcional',
-        extras: ['Planchas y movilidad lumbar'],
+        dia: 'Martes - Tren superior + Circuito funcional',
+        extras: ['Circuito funcional 3 vueltas, sin descanso entre ejercicios): Burpees x 10, Battle ropes x 30”, Wall balls x 15, Saltos laterales con vallas x 10'],
         ejercicios: [
-          { nombre: 'Plancha con rodilla al codo', repeticiones: '4 x 30s' },
-          { nombre: 'Crunch en V', repeticiones: '4 x 25' },
-          { nombre: 'Elevación de piernas controlada', repeticiones: '4 x 20' }
+          { nombre: 'Press banca plano', repeticiones: '4 x 10' },
+          { nombre: 'Remo con barra', repeticiones: '4 x 10' },
+          { nombre: 'Fondos en paralelas', repeticiones: '3 x 15' },
+          { nombre: 'Dominadas estrictas', repeticiones: '4 x fallo' },
+          { nombre: 'Press militar con mancuernas', repeticiones: '3 x 10' },
+          { nombre: 'Curl bíceps barra Z', repeticiones: '3 x 12' },
+          { nombre: 'Tríceps cuerda en polea', repeticiones: '3 x 12' }
+        ]
+      },
+            {
+        dia: 'Miercoles - HIIT + Core + Técnica',
+        extras: ['30 seg sprint / 30 seg trote x 10, 1 min descanso, 20 seg sprint / 10 seg descanso x 8'],
+        ejercicios: [
+          { nombre: 'Russian twists con balón', repeticiones: '4 x 20' },
+          { nombre: 'Crunch con polea alta', repeticiones: '4 x 15' },
+          { nombre: 'Plancha con extensión de brazo', repeticiones: '3 x 12 c/brazo' },
+          { nombre: 'L-sit en paralelas', repeticiones: '3 x 30 seg' }
         ]
       },
       {
