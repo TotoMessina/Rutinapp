@@ -1,44 +1,36 @@
+import { useState, useEffect } from "react"
 import Header from "../components/Header"
 import Formulario from "../components/Formulario"
-import rutinasFamosos from "../data/rutinasFamosos"
-import { useNavigate } from "react-router-dom"
-import { useState } from "react"
 import SelectorDificultad from "../components/SelectorDificultad"
+import { useAuth } from "../context/AuthContext.jsx"
+import { Link } from "react-router-dom"
 
 function Home() {
-  const navigate = useNavigate()
+  const [modoOscuro, setModoOscuro] = useState(() => {
+    const guardado = localStorage.getItem("modoOscuro")
+    return guardado ? guardado === "true" : true
+  })
+  const { usuario } = useAuth()
 
-  const elegirRutinaFamosa = (rutina) => {
-    localStorage.setItem("rutinaFamosa", JSON.stringify(rutina))
-    navigate("/resultado")
-  }
+  useEffect(() => {
+    localStorage.setItem("modoOscuro", modoOscuro)
+  }, [modoOscuro])
 
   return (
-    <main>
-      <Header />
-      <Formulario />
-
-      <section style={{ marginTop: "3rem" }}>
-        <SelectorDificultad />
-      </section>
-
-      {/* Si quisieras mantener esta parte fija aparte del filtro */}
-      {/* <section>
-        <h2>O elegí una rutina famosa directamente</h2>
-        <div className="famoso-grid">
-          {rutinasFamosos.map((r) => (
-            <div
-              key={r.id}
-              className="famoso-card"
-              onClick={() => elegirRutinaFamosa(r)}
-            >
-              <h3>{r.nombre}</h3>
-              <p>{r.descripcion}</p>
-            </div>
-          ))}
+    <div className={`container-principal ${modoOscuro ? "oscuro" : "claro"}`}>
+      <Header modoOscuro={modoOscuro} setModoOscuro={setModoOscuro} />
+      {usuario ? (
+        <>
+          <Formulario />
+          <SelectorDificultad modoOscuro={modoOscuro} />
+        </>
+      ) : (
+        <div style={{ marginTop: '2rem', textAlign: 'center' }}>
+          <p>Debes iniciar sesión para generar tu rutina personalizada.</p>
+          <Link to="/registro">¿No tienes cuenta? Regístrate aquí</Link>
         </div>
-      </section> */}
-    </main>
+      )}
+    </div>
   )
 }
 

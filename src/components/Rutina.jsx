@@ -1,9 +1,12 @@
 import { useEffect, useState } from "react"
 import generarRutina from "../utils/generadorRutina"
 import exportarPDF from "../utils/exportarPDF"
+import { guardarEntrenamiento } from "../services/entrenamientos"
+import { useAuth } from "../context/AuthContext.jsx"
 
 function Rutina() {
   const [rutina, setRutina] = useState([])
+  const { usuario } = useAuth()
 
   useEffect(() => {
     const datos = JSON.parse(localStorage.getItem("datosRutina"))
@@ -16,6 +19,12 @@ function Rutina() {
       setRutina(nuevaRutina)
     }
   }, [])
+
+  useEffect(() => {
+    if (rutina.length > 0 && usuario) {
+      guardarEntrenamiento(rutina, usuario)
+    }
+  }, [rutina, usuario])
 
   return (
     <section>

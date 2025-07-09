@@ -72,7 +72,6 @@ body {
   font-family: 'Helvetica Neue', sans-serif;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
-  padding: 20px;
 }
 
 main {
@@ -141,4 +140,22 @@ header {
 .famoso-card p {
   font-size: 0.9rem;
   color: #bbb;
+}
+
+.container-principal {
+  padding: 20px;
+}
+
+.container-principal.claro {
+  background: linear-gradient(to bottom, #ffffff, #eeeeee 70%, #dddddd 100%);
+  color: #121212;
+  min-height: 100vh;
+  transition: background 0.4s ease;
+}
+
+.container-principal.oscuro {
+  background: linear-gradient(to bottom, #0e0e0e, #1f1f1f 70%, #2a2a2a 100%);
+  color: #f5f5f5;
+  min-height: 100vh;
+  transition: background 0.4s ease;
 }
